@@ -2,7 +2,7 @@
 <p align="center">Pós-Graduação Turma IV - 2019 ( WEBDEV Alfa IV ).</p>
 <br>
 
-## Projeto Disciplina Programação PHP com Framework Laravel.
+## Trabalho com Framework Laravel 5.7.
 
 ## Tecnologias Utilizadas
 
