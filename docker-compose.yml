@@ -1,0 +1,38 @@
+version: "3"
+services:
+  web:
+    build: ./.docker/web
+    ports:
+      - "${PORTA_WEB}:80"
+    volumes:
+      - .docker/web/web.conf:/etc/apache2/sites-enabled/web.conf
+      - ./:/var/www/html/
+    environment:
+      DOCKER_HOST_IP:
+    links:
+      - db
+    networks:
+      - backend
+    tty: true
+
+  db:
+    build: ./.docker/db
+    ports:
+      - "${PORTA_BANCO}:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_USER: "${DB_USERNAME}"
+    volumes:
+      - ./.docker/db/data:/var/lib/mysql
+    networks:
+      - backend
+    tty: true
+
+volumes:
+  data:
+
+networks:
+  backend:
+    driver: bridge

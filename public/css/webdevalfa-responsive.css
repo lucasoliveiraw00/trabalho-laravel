@@ -1,0 +1,25 @@
+/*Mobile*/
+@media screen and (max-width: 479px) {
+	form.form-search input{width: 100px;}
+	.title{font-size: 1.8em;}
+	.sub-title{font-size: 1.2em;}
+}
+
+@media screen and (max-width: 768px) {
+	form.form-search input{width: 180px;}
+	h1.text-slide{font-size: 1em;}
+	.title{font-size: 2em;}
+}
+
+@media screen and (max-width: 989px) {
+	div.logo{margin-bottom: 20px; text-align: center;}
+	div.form{
+		    float: none;
+			margin: 0px auto;
+			width: 280px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	
+}
