@@ -13,8 +13,10 @@
 
 ## Uso
 
-1. Configurar arquivo .env
-2. Executar docker ( docker-compose up -d --build ).
-3. Verificar se os containers foram criados ( docker ps ).
-4. Entrar no container em execução ( docker exec -it EX:trabalho-laravel_web_1 bash ).
-5. Criar migrate no container em execução ( php artisan migrate ).
+1. Criar arquivo .env com base no arquivo env.example.
+2. Executar: composer update.
+3. Executar: php artisan key:generate.
+4. Executar docker: docker-compose up -d --build.
+5. Verificar se os containers foram criados: docker ps.
+6. Entrar no container em execução: docker exec -it EX:trabalho-laravel_web_1 bash.
+7. Criar migrate no container em execução: php artisan migrate.
